@@ -1,0 +1,63 @@
+[user]
+
+	ID = Brian Yi
+	email = brianyi@umich.edu
+	username = beeyii
+
+[alias]
+
+	" Adding all the files
+	a = add --all
+
+	" Checking the branch
+	b = branch
+
+	" Show the diff between the latest commit and the current state
+	di = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+	" Clone a repository including all submodules
+	c = clone --recursive
+
+	" Commit all changes
+	ca = !git add -A && git commit -av
+
+	" Commit inital with inital message
+	ci = commit -m "Initial Commit"
+
+	" Pull the origin master files
+	plom = pull origin master
+
+	" Push -u as origin master
+	psuom = push -u origin master
+
+	" git status
+	s = status
+
+	" Gives you a nice readable log with branch paths
+	sprlog = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)     %d%C(reset)' --all
+	
+	" Gives you the timestamps along with the sprlog
+	sprtimelog = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''     %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
+[core]
+
+	" Default editor
+	editor = vim
+
+	" Use .gitignore
+	ig = ~/.gitignore
+
+[color]
+
+	" Adding colors to the git commands
+	ui = auto
+
+[color "status"]
+
+	" More colors to the status #BoBlue
+	added = yellow bold
+	changed = blue bold
+	untracked = white bold
+
+
+
